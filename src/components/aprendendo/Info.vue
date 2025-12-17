@@ -7,10 +7,15 @@ defineOptions({
 
 const estaTrabalhando = ref(true)
 const email = 'thiago@teste.com'
-const mostrarEmail = true
+const mostrarEmail = ref(false)
 
 const numeros = [1, 2, 3, 4, 5]
 const meu_link = 'https://jsonplaceholder.typicode.com/todos'
+
+function toggleEmail() {
+  console.log('Mostrando email')
+  mostrarEmail.value = !mostrarEmail.value
+}
 </script>
 
 <template>
@@ -25,6 +30,12 @@ const meu_link = 'https://jsonplaceholder.typicode.com/todos'
   <p v-if="estaTrabalhando">Thiago atualmente está trabalhando</p>
   <p v-else>Nao está trabalhando {{ estaTrabalhando }}</p>
   <p v-if="1 > 2">Teste</p>
+  <button
+    @click="toggleEmail"
+    class="border rounded-lg px-4 py-2 my-4 hover:border-red-500 transition-all"
+  >
+    Mostrar email
+  </button>
   <p v-show="mostrarEmail">Email: {{ email }}</p>
 
   <div v-for="(n, index) in numeros" :key="index">
