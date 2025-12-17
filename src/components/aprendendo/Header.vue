@@ -20,7 +20,7 @@ const backend_technologies = ['Javascript', 'PHP', 'Python']
       class="flex w-full items-center justify-center"
     >
       <li>
-        <a class="hover:text-green-500 hover:cursor-pointer">{{ item.nome }}</a>
+        <a class="hover:text-green-500 hover:cursor-pointers">{{ item.nome }}</a>
       </li>
     </ul>
   </header>
