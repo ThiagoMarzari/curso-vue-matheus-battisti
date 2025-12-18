@@ -27,7 +27,7 @@ const toggleEmail = () => {
 </script>
 
 <template>
-  <div class="w-4 h-4 border">
+  <div class="h-4 w-4 border">
     <p>Nome: {{ name }}</p>
     <p>Email: {{ email }}</p>
     <p>Está trabalhando: {{ estaTrabalhando }}</p>
@@ -36,11 +36,11 @@ const toggleEmail = () => {
   <p>Estou trabalhando no momento</p>
   <p>Utilizo as seguintes tecnologias</p>
 
-  <ul class="border py-4 my-4">
+  <ul class="my-4 border py-4">
     <li v-for="(tech, index) in backendTechnologies" :key="index">{{ tech }}</li>
   </ul>
 
-  <ul class="border py-4 my-4">
+  <ul class="my-4 border py-4">
     <li v-for="(tech, index) in frontendTechnologies" :key="index">{{ tech }}</li>
   </ul>
 
@@ -49,7 +49,7 @@ const toggleEmail = () => {
   <p v-if="1 > 2">Teste</p>
   <button
     @click="toggleEmail"
-    class="border rounded-lg px-4 py-2 my-4 hover:border-red-500 transition-all"
+    class="my-4 rounded-lg border px-4 py-2 transition-all hover:border-red-500"
   >
     Mostrar email
   </button>

@@ -18,10 +18,10 @@ const enviarFormulario = (event: SubmitEvent) => {
 
 <template>
   <form @submit="enviarFormulario">
-    <div class="flex gap-4 my-4">
-      <input class="border px-2 rounded-lg" type="text" v-model="name" />
-      <input class="border px-2 rounded-lg" type="text" v-model="email" />
-      <input type="submit" class="border rounded-lg px-4 py-2" />
+    <div class="my-4 flex gap-4">
+      <input class="rounded-lg border px-2" type="text" v-model="name" />
+      <input class="rounded-lg border px-2" type="text" v-model="email" />
+      <input type="submit" class="rounded-lg border px-4 py-2" />
     </div>
   </form>
 </template>
