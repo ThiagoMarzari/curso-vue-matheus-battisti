@@ -27,7 +27,7 @@ const toggleEmail = () => {
 </script>
 
 <template>
-  <div class="h-4 w-4 border">
+  <div class="border">
     <p>Nome: {{ name }}</p>
     <p>Email: {{ email }}</p>
     <p>Está trabalhando: {{ estaTrabalhando }}</p>
@@ -47,12 +47,14 @@ const toggleEmail = () => {
   <p v-if="estaTrabalhando">Thiago atualmente está trabalhando</p>
   <p v-else>Nao está trabalhando {{ estaTrabalhando }}</p>
   <p v-if="1 > 2">Teste</p>
+
   <button
     @click="toggleEmail"
     class="my-4 rounded-lg border px-4 py-2 transition-all hover:border-red-500"
   >
     Mostrar email
   </button>
+
   <p v-show="showEmail">Email: {{ email }}</p>
 
   <div v-for="(n, index) in numeros" :key="index">

@@ -4,6 +4,6 @@ import Pessoa from './components/aprendendo/Pessoa.vue'
 </script>
 
 <template>
-  <Header :estaLogado="true" />
+  <Header :isSigned="false" />
   <Pessoa />
 </template>
