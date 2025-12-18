@@ -11,6 +11,8 @@ const mostrarEmail = ref(false)
 
 const numeros = [1, 2, 3, 4, 5]
 const meu_link = 'https://jsonplaceholder.typicode.com/todos'
+const backendTechnologies = ['Javasript', 'PHP', 'Python']
+const frontendTechnologies = ['html', 'css', 'react']
 
 function toggleEmail() {
   console.log('Mostrando email')
@@ -21,10 +23,13 @@ function toggleEmail() {
 <template>
   <p>Estou trabalhando no momento</p>
   <p>Utilizo as seguintes tecnologias</p>
-  <ul>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+
+  <ul class="border py-4 my-4">
+    <li v-for="(tech, index) in backendTechnologies" :key="index">{{ tech }}</li>
+  </ul>
+
+  <ul class="border py-4 my-4">
+    <li v-for="(tech, index) in frontendTechnologies" :key="index">{{ tech }}</li>
   </ul>
 
   <p v-if="estaTrabalhando">Thiago atualmente está trabalhando</p>
