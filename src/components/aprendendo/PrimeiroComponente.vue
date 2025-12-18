@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Reutilizacao from './Reutilizacao.vue'
 
 defineOptions({
   name: 'PrimeiroComponente',
@@ -10,6 +11,7 @@ const profissao = ref('Programador')
 </script>
 
 <template>
-  <h1>Hello World</h1>
   <p>Meu nome eh: {{ nome }} e profissao: {{ profissao }}</p>
+  <Reutilizacao />
+  <Reutilizacao />
 </template>

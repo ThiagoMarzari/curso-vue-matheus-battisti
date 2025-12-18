@@ -8,8 +8,8 @@ defineOptions({
 const name = ref('')
 const email = ref('')
 
-function enviarFormulario(e: SubmitEvent) {
-  e.preventDefault()
+const enviarFormulario = (event: SubmitEvent) => {
+  event.preventDefault()
 
   console.log(name.value)
   console.log(email.value)
@@ -17,7 +17,7 @@ function enviarFormulario(e: SubmitEvent) {
 </script>
 
 <template>
-  <form action="" @submit="enviarFormulario">
+  <form @submit="enviarFormulario">
     <div class="flex gap-4 my-4">
       <input class="border px-2 rounded-lg" type="text" v-model="name" />
       <input class="border px-2 rounded-lg" type="text" v-model="email" />

@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import Info from './Info.vue'
 import Form from './Form.vue'
 import Picture from './Picture.vue'
+import { ref } from 'vue'
 
 defineOptions({
   name: 'PessoaComponent',
 })
 
-const nome = ref('Thiago')
+const email = ref('thiago@teste.com')
 </script>
 
 <template>
-  {{ nome }}
-  <Info />
+  <Info :email="email" :estaTrabalhando="true" name="Thiago Marzari" />
   <Form />
   <Picture />
 </template>

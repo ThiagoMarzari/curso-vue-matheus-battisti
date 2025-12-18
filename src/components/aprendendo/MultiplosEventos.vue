@@ -7,12 +7,12 @@ defineOptions({
 
 const multiplosEventos = ref('')
 
-function primeiro(txt: string, e: PointerEvent) {
+const primeiro = (txt: string, e: PointerEvent) => {
   console.log(e)
   multiplosEventos.value = txt
 }
 
-function segundo(txt: string, e: PointerEvent) {
+const segundo = (txt: string, e: PointerEvent) => {
   setTimeout(() => {
     multiplosEventos.value = txt
   }, 500)

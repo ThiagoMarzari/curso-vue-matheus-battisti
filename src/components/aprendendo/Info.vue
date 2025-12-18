@@ -1,26 +1,38 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+interface InfoProps {
+  name: string
+  email: string
+  estaTrabalhando: boolean
+}
+
+defineProps<InfoProps>()
+
 defineOptions({
   name: 'InfoComponent',
 })
 
-const estaTrabalhando = ref(true)
-const email = 'thiago@teste.com'
-const mostrarEmail = ref(false)
+const showEmail = ref(false)
 
 const numeros = [1, 2, 3, 4, 5]
 const meu_link = 'https://jsonplaceholder.typicode.com/todos'
 const backendTechnologies = ['Javasript', 'PHP', 'Python']
 const frontendTechnologies = ['html', 'css', 'react']
 
-function toggleEmail() {
+const toggleEmail = () => {
   console.log('Mostrando email')
-  mostrarEmail.value = !mostrarEmail.value
+  showEmail.value = !showEmail.value
 }
 </script>
 
 <template>
+  <div class="w-4 h-4 border">
+    <p>Nome: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Está trabalhando: {{ estaTrabalhando }}</p>
+  </div>
+
   <p>Estou trabalhando no momento</p>
   <p>Utilizo as seguintes tecnologias</p>
 
@@ -41,7 +53,7 @@ function toggleEmail() {
   >
     Mostrar email
   </button>
-  <p v-show="mostrarEmail">Email: {{ email }}</p>
+  <p v-show="showEmail">Email: {{ email }}</p>
 
   <div v-for="(n, index) in numeros" :key="index">
     <p v-if="n <= 3">{{ n }}</p>

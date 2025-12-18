@@ -1,7 +1,10 @@
 <script setup lang="ts">
-defineOptions({
-  name: 'HeaderComponent',
-})
+interface HeaderProps {
+  estaLogado: boolean
+}
+
+defineOptions({ name: 'HeaderComponent' })
+defineProps<HeaderProps>()
 
 const headerElements = [
   { id: 1, nome: 'Home' },
@@ -11,7 +14,7 @@ const headerElements = [
 </script>
 
 <template>
-  <header class="bg-gray-900 text-white px-4 py-8 w-full flex">
+  <header class="w-full flex bg-gray-900 text-white px-4 py-8">
     <ul
       v-for="item in headerElements"
       :key="item.id"
