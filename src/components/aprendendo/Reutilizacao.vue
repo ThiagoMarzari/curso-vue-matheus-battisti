@@ -14,7 +14,7 @@ const ativar = () => {
 
 <template>
   <div>
-    <button class="border rounded-lg px-4 py-2" @click="ativar">Clique aqui!</button>
+    <button class="rounded-lg border px-4 py-2" @click="ativar">Clique aqui!</button>
     <span v-show="ativou">Ativado!</span>
   </div>
 </template>

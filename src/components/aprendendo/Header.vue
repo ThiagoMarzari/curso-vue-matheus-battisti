@@ -6,21 +6,40 @@ interface HeaderProps {
 defineOptions({ name: 'HeaderComponent' })
 defineProps<HeaderProps>()
 
-const headerElements = [
-  { id: 1, nome: 'Home' },
-  { id: 2, nome: 'Projetos' },
-  { id: 3, nome: 'Contatos' },
+const navLinks = [
+  { id: 1, name: 'Home', href: '#' },
+  { id: 2, name: 'Projetos', href: '#' },
+  { id: 3, name: 'Contatos', href: '#' },
 ]
 </script>
 
 <template>
-  <header class="flex w-full bg-gray-900 px-4 py-8 text-white">
-    <ul class="flex w-full items-center justify-between">
-      <li v-for="item in headerElements" :key="item.id">
-        <a class="hover:cursor-pointer hover:text-green-500">{{ item.nome }}</a>
-      </li>
-      <li v-if="isSigned"><a href="#">Meu perfil</a></li>
-      <li v-else><a href="#">Fazer Login</a></li>
-    </ul>
+  <header class="flex w-full bg-gray-900 px-4 py-6 text-white">
+    <nav class="mx-auto w-full max-w-7xl">
+      <ul class="flex items-center justify-between">
+        <div>
+          <img src="/user.jpeg" alt="Logo site" class="h-10 w-10 rounded-full" />
+        </div>
+        <div class="flex gap-8">
+          <li v-for="link in navLinks" :key="link.id">
+            <a :href="link.href" class="transition-colors hover:text-green-500">
+              {{ link.name }}
+            </a>
+          </li>
+        </div>
+        <li>
+          <a v-if="isSigned" href="/perfil" class="transition-colors hover:text-green-500">
+            Meu perfil
+          </a>
+          <a
+            v-else
+            href="/login"
+            class="rounded-lg bg-green-500 px-4 py-2 transition-colors hover:bg-green-600"
+          >
+            Fazer Login
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>

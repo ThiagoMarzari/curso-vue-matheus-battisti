@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <h1>Meu nome eh: {{ nome }}</h1>
+  <h1 class="text-4xl">Meu nome eh: {{ nome }}</h1>
 
   <button class="rounded-lg border p-4" @click="nome = 'Juca'">Click me</button>
 </template>

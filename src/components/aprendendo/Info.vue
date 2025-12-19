@@ -13,12 +13,12 @@ defineOptions({
   name: 'InfoComponent',
 })
 
-const showEmail = ref(false)
-
 const numbers = [1, 2, 3, 4, 5]
 const link = ref('https://jsonplaceholder.typicode.com/todos')
 const backendTechnologies = ['Javasript', 'PHP', 'Python']
 const frontendTechnologies = ['html', 'css', 'react']
+
+const showEmail = ref(false)
 
 const toggleEmail = () => {
   console.log('Mostrando email')
