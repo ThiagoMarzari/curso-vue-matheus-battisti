@@ -18,7 +18,12 @@ const navLinks = [
     <nav class="mx-auto w-full max-w-7xl">
       <ul class="flex items-center justify-between">
         <div>
-          <img src="/user.jpeg" alt="Logo site" class="h-10 w-10 rounded-full" />
+          <!-- Deixar sem a div ou com div ? -->
+          <img
+            src="/user.jpeg"
+            alt="Logo site"
+            class="animate h-10 w-10 rounded-full transition-all hover:scale-105 hover:animate-bounce"
+          />
         </div>
         <div class="flex gap-8">
           <li v-for="link in navLinks" :key="link.id">
