@@ -1,21 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineOptions({
-  name: 'FormComponent',
-})
-
-const name = ref('')
-const email = ref('')
-
-const enviarFormulario = (event: SubmitEvent) => {
-  event.preventDefault()
-
-  console.log(name.value)
-  console.log(email.value)
-}
-</script>
-
 <template>
   <form @submit="enviarFormulario">
     <div class="my-2 flex gap-4">
@@ -40,3 +22,21 @@ const enviarFormulario = (event: SubmitEvent) => {
     </div>
   </form>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+defineOptions({
+  name: 'FormComponent',
+})
+
+const name = ref('')
+const email = ref('')
+
+const enviarFormulario = (event: SubmitEvent) => {
+  event.preventDefault()
+
+  console.log(name.value)
+  console.log(email.value)
+}
+</script>

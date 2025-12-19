@@ -1,3 +1,9 @@
+<template>
+  <h1 class="text-4xl">Meu nome eh: {{ nome }}</h1>
+
+  <button class="rounded-lg border p-4" @click="nome = 'Juca'">Click me</button>
+</template>
+
 <script setup lang="ts">
 import { onBeforeMount, onMounted, onUnmounted, onUpdated, ref } from 'vue'
 
@@ -21,9 +27,3 @@ onUnmounted(() => {
   console.log('Componente desmontado')
 })
 </script>
-
-<template>
-  <h1 class="text-4xl">Meu nome eh: {{ nome }}</h1>
-
-  <button class="rounded-lg border p-4" @click="nome = 'Juca'">Click me</button>
-</template>

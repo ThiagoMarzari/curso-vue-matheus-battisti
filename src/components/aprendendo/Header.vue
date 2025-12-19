@@ -1,18 +1,3 @@
-<script setup lang="ts">
-interface HeaderProps {
-  isSigned: boolean
-}
-
-defineOptions({ name: 'HeaderComponent' })
-defineProps<HeaderProps>()
-
-const navLinks = [
-  { id: 1, name: 'Home', href: '#' },
-  { id: 2, name: 'Projetos', href: '#' },
-  { id: 3, name: 'Contatos', href: '#' },
-]
-</script>
-
 <template>
   <header class="flex w-full bg-gray-900 px-4 py-6 text-white">
     <nav class="mx-auto w-full max-w-7xl">
@@ -48,3 +33,18 @@ const navLinks = [
     </nav>
   </header>
 </template>
+
+<script setup lang="ts">
+interface HeaderProps {
+  isSigned: boolean
+}
+
+defineOptions({ name: 'HeaderComponent' })
+defineProps<HeaderProps>()
+
+const navLinks = [
+  { id: 1, name: 'Home', href: '#' },
+  { id: 2, name: 'Projetos', href: '#' },
+  { id: 3, name: 'Contatos', href: '#' },
+]
+</script>

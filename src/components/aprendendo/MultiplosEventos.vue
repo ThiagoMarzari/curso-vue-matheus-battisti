@@ -1,3 +1,15 @@
+<template>
+  <div class="space-y-2">
+    <button
+      @click="handleMultipleEvents"
+      class="rounded-lg border px-4 py-2 transition-colors hover:bg-gray-100"
+    >
+      Ativar multiplos eventos
+    </button>
+    <p>{{ multiplosEventos }}</p>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -33,15 +45,3 @@ const handleMultipleEvents = (event: PointerEvent) => {
   second(secondText, event)
 }
 </script>
-
-<template>
-  <div class="space-y-2">
-    <button
-      @click="handleMultipleEvents"
-      class="rounded-lg border px-4 py-2 transition-colors hover:bg-gray-100"
-    >
-      Ativar multiplos eventos
-    </button>
-    <p>{{ multiplosEventos }}</p>
-  </div>
-</template>

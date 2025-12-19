@@ -1,3 +1,7 @@
+<template>
+  <img :src="avatar" :alt="description" />
+</template>
+
 <script lang="ts" setup>
 import { ref } from 'vue'
 
@@ -8,7 +12,3 @@ defineOptions({
 const avatar = ref('/user.jpeg')
 const description = ref('Thiago Marzari Rossato')
 </script>
-
-<template>
-  <img :src="avatar" :alt="description" />
-</template>

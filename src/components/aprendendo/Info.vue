@@ -1,31 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-interface InfoProps {
-  name: string
-  email: string
-  isWorking: boolean
-}
-
-defineProps<InfoProps>()
-
-defineOptions({
-  name: 'InfoComponent',
-})
-
-const numbers = [1, 2, 3, 4, 5]
-const link = ref('https://jsonplaceholder.typicode.com/todos')
-const backendTechnologies = ['Javasript', 'PHP', 'Python']
-const frontendTechnologies = ['html', 'css', 'react']
-
-const showEmail = ref(false)
-
-const toggleEmail = () => {
-  console.log('Mostrando email')
-  showEmail.value = !showEmail.value
-}
-</script>
-
 <template>
   <div class="border">
     <p>Nome: {{ name }}</p>
@@ -64,3 +36,31 @@ const toggleEmail = () => {
 
   <p>Acessar meu portfolio: <a :href="link" target="_blank"> Clique aqui...</a></p>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+interface InfoProps {
+  name: string
+  email: string
+  isWorking: boolean
+}
+
+defineProps<InfoProps>()
+
+defineOptions({
+  name: 'InfoComponent',
+})
+
+const numbers = [1, 2, 3, 4, 5]
+const link = ref('https://jsonplaceholder.typicode.com/todos')
+const backendTechnologies = ['Javasript', 'PHP', 'Python']
+const frontendTechnologies = ['html', 'css', 'react']
+
+const showEmail = ref(false)
+
+const toggleEmail = () => {
+  console.log('Mostrando email')
+  showEmail.value = !showEmail.value
+}
+</script>
