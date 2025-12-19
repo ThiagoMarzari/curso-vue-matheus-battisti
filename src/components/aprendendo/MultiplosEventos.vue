@@ -1,31 +1,44 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+interface MultiplosEventosProps {
+  firstText: string
+  secondText: string
+  delay: number
+}
+
+const { firstText, secondText, delay } = defineProps<MultiplosEventosProps>()
+
 defineOptions({
-  name: 'MultiplosEventosCompoennt',
+  name: 'MultiplosEventosComponent',
 })
 
 const multiplosEventos = ref('')
 
-const primeiro = (txt: string, e: PointerEvent) => {
+const first = (txt: string, e: PointerEvent) => {
   console.log(e)
   multiplosEventos.value = txt
 }
 
-const segundo = (txt: string, e: PointerEvent) => {
+const second = (txt: string, e: PointerEvent) => {
   setTimeout(() => {
     multiplosEventos.value = txt
-  }, 500)
+  }, delay)
 
   console.log(e)
+}
+
+const handleMultipleEvents = (event: PointerEvent) => {
+  first(firstText, event)
+  second(secondText, event)
 }
 </script>
 
 <template>
-  <div>
+  <div class="space-y-2">
     <button
-      @click="(primeiro('teste 1', $event), segundo('teste 2', $event))"
-      class="border rounded-lg px-4 py-2"
+      @click="handleMultipleEvents"
+      class="rounded-lg border px-4 py-2 transition-colors hover:bg-gray-100"
     >
       Ativar multiplos eventos
     </button>

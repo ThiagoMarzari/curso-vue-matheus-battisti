@@ -12,7 +12,7 @@ const email = ref('thiago@teste.com')
 </script>
 
 <template>
-  <Info :email="email" :estaTrabalhando="true" name="Thiago Marzari" />
+  <Info :email="email" :isWorking="true" name="Thiago Marzari" />
   <Form />
   <Picture />
 </template>

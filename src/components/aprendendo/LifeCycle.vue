@@ -25,5 +25,5 @@ onUnmounted(() => {
 <template>
   <h1>Meu nome eh: {{ nome }}</h1>
 
-  <button class="border p-4 rounded-lg" @click="nome = 'Juca'">Click me</button>
+  <button class="rounded-lg border p-4" @click="nome = 'Juca'">Click me</button>
 </template>

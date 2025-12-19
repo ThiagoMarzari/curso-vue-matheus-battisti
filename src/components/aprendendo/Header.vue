@@ -8,8 +8,8 @@ defineProps<HeaderProps>()
 
 const headerElements = [
   { id: 1, nome: 'Home' },
-  { id: 1, nome: 'Projetos' },
-  { id: 1, nome: 'Contatos' },
+  { id: 2, nome: 'Projetos' },
+  { id: 3, nome: 'Contatos' },
 ]
 </script>
 
