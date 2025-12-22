@@ -34,7 +34,7 @@
     <p v-else class="text-green-500">{{ n }}</p>
   </div>
 
-  <p>Acessar meu portfolio: <a :href="link" target="_blank"> Clique aqui...</a></p>
+  <p>Acessar meu portfolio: <a :href="link" target="_blank" rel="noreferrer"> Clique aqui...</a></p>
 </template>
 
 <script setup lang="ts">
@@ -47,10 +47,7 @@ interface InfoProps {
 }
 
 defineProps<InfoProps>()
-
-defineOptions({
-  name: 'InfoComponent',
-})
+defineOptions({ name: 'InfoComponent' })
 
 const numbers = [1, 2, 3, 4, 5]
 const link = ref('https://jsonplaceholder.typicode.com/todos')

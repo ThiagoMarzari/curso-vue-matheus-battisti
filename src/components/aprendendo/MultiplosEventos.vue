@@ -19,7 +19,7 @@ interface MultiplosEventosProps {
   delay: number
 }
 
-const { firstText, secondText, delay } = defineProps<MultiplosEventosProps>()
+const props = defineProps<MultiplosEventosProps>()
 
 defineOptions({
   name: 'MultiplosEventosComponent',
@@ -35,13 +35,13 @@ const first = (txt: string, e: PointerEvent) => {
 const second = (txt: string, e: PointerEvent) => {
   setTimeout(() => {
     multiplosEventos.value = txt
-  }, delay)
+  }, props.delay)
 
   console.log(e)
 }
 
 const handleMultipleEvents = (event: PointerEvent) => {
-  first(firstText, event)
-  second(secondText, event)
+  first(props.firstText, event)
+  second(props.secondText, event)
 }
 </script>
