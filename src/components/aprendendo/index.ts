@@ -1,3 +1,5 @@
+//Nao vale a pena
+
 export * from './Form.vue'
 export * from './Header.vue'
 export * from './Info.vue'
