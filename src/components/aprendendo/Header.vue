@@ -2,14 +2,11 @@
   <header class="flex w-full bg-gray-900 px-4 py-6 text-white">
     <nav class="mx-auto w-full max-w-7xl">
       <ul class="flex items-center justify-between">
-        <div>
-          <!-- Deixar sem a div ou com div ? -->
-          <img
-            src="/user.jpeg"
-            alt="Logo site"
-            class="animate h-10 w-10 rounded-full transition-all hover:scale-105 hover:animate-bounce"
-          />
-        </div>
+        <img
+          src="/user.jpeg"
+          alt="Logo site"
+          class="animate h-10 w-10 rounded-full transition-all hover:scale-105 hover:animate-bounce"
+        />
         <div class="flex gap-8">
           <li v-for="link in navLinks" :key="link.id">
             <a :href="link.href" class="transition-colors hover:text-green-500">
